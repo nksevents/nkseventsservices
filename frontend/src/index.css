@@ -82,6 +82,12 @@ code {
 }
 
 @layer base {
+    html {
+        /* This applies a physical zoom-out across the entire renderer */
+        zoom: 0.90;
+        -moz-transform: scale(0.90);
+        -moz-transform-origin: top center;
+    }
     * {
         @apply border-border;
     }

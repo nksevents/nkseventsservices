@@ -35,8 +35,8 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl w-full text-center mx-auto flex flex-col items-center">
         <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both relative">
           
-          {/* Subtle glow behind text */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/10 dark:bg-secondary/20 blur-[100px] rounded-full pointer-events-none -z-10"></div>
+          {/* Strong contrast backdrop gradient to ensure text readability over the active video background */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] sm:w-[150%] h-[200%] sm:h-[160%] bg-[radial-gradient(circle,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0.7)_30%,rgba(255,255,255,0)_70%)] dark:bg-[radial-gradient(circle,rgba(10,10,11,0.9)_0%,rgba(10,10,11,0.7)_30%,rgba(10,10,11,0)_70%)] blur-[25px] pointer-events-none -z-10"></div>
 
           <div className="inline-block px-5 py-2 bg-primary/5 dark:bg-white/10 backdrop-blur-md border border-primary/20 dark:border-white/20 rounded-full mb-8 shadow-lg shadow-primary/10 dark:shadow-primary/20 hover:bg-primary/10 dark:hover:bg-white/15 transition-colors cursor-default">
             <span className="text-primary dark:text-white/90 text-sm font-semibold uppercase tracking-widest flex items-center gap-2">
@@ -45,14 +45,14 @@ const Hero = () => {
             </span>
           </div>
           
-          <h1 className="font-sans font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[1.1] md:leading-[1.1] text-foreground dark:text-white mb-6 tracking-tight drop-shadow-sm dark:drop-shadow-xl">
+          <h1 className="font-sans font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[1.1] md:leading-[1.1] text-foreground dark:text-white mb-6 tracking-tight drop-shadow-[0_0_20px_rgba(255,255,255,1)] dark:drop-shadow-[0_0_25px_rgba(0,0,0,1)] relative z-10">
             Creating Unforgettable <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-black dark:from-secondary dark:to-[#c276f5] dark:drop-shadow-[0_0_15px_rgba(143,43,203,0.3)]">
               Experiences
             </span>
           </h1>
           
-          <p className="font-sans font-medium text-lg md:text-xl text-foreground/80 dark:text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-sm dark:drop-shadow-md">
+          <p className="font-sans font-semibold text-lg md:text-xl text-black/80 dark:text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-[0_0_15px_rgba(255,255,255,1)] dark:drop-shadow-[0_0_15px_rgba(0,0,0,1)] relative z-10">
             Professional event execution and coordination for corporates, educational institutions, and communities. We turn your vision into reality.
           </p>
           
@@ -82,8 +82,8 @@ const Hero = () => {
         {/* Quick Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-24 max-w-4xl mx-auto w-full animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300 fill-mode-both">
           {[
-            { number: "500+", label: "Events Executed" },
-            { number: "10+", label: "Years Experience" },
+            { number: "50+", label: "Events Executed" },
+            { number: "5+", label: "Years Experience" },
             { number: "100%", label: "Client Satisfaction" }
           ].map((stat, i) => (
             <div key={i} className="group relative p-8 bg-white/80 dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 backdrop-blur-md rounded-2xl border border-primary/10 dark:border-white/[0.08] dark:border-[0.5px] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-secondary/20 overflow-hidden shadow-sm">
