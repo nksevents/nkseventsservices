@@ -41,7 +41,7 @@ const Hero = () => {
           <div className="inline-block px-5 py-2 bg-primary/5 dark:bg-white/10 backdrop-blur-md border border-primary/20 dark:border-white/20 rounded-full mb-8 shadow-lg shadow-primary/10 dark:shadow-primary/20 hover:bg-primary/10 dark:hover:bg-white/15 transition-colors cursor-default">
             <span className="text-primary dark:text-white/90 text-sm font-semibold uppercase tracking-widest flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary dark:bg-secondary shadow-[0_0_10px_rgba(91,45,139,0.5)] dark:shadow-[0_0_10px_theme(colors.secondary.DEFAULT)] animate-pulse"></span>
-              Chennai's Premier Event Partner
+              End-to-End Event Solutions
             </span>
           </div>
           
@@ -86,7 +86,7 @@ const Hero = () => {
             { number: "10+", label: "Years Experience" },
             { number: "100%", label: "Client Satisfaction" }
           ].map((stat, i) => (
-            <div key={i} className="group relative p-8 bg-white/80 dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 backdrop-blur-md rounded-2xl border border-primary/10 dark:border-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-secondary/20 overflow-hidden shadow-sm">
+            <div key={i} className="group relative p-8 bg-white/80 dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 backdrop-blur-md rounded-2xl border border-primary/10 dark:border-white/[0.08] dark:border-[0.5px] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-secondary/20 overflow-hidden shadow-sm">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               
               <div className="text-4xl md:text-5xl font-extrabold text-foreground dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-white dark:to-white/70 mb-2 relative z-10 w-fit mx-auto">

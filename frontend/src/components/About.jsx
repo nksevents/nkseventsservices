@@ -97,7 +97,7 @@ const About = () => {
         </div>
 
         {/* ── Right column ── */}
-        <div className="bg-card dark:bg-white/5 border border-primary/10 dark:border-white/10 p-10 md:p-12 rounded-3xl shadow-[0_20px_40px_-15px_rgba(91,45,139,0.1)]">
+        <div className="bg-card dark:bg-white/5 border border-primary/10 dark:border-white/[0.08] dark:border-[0.5px] p-10 md:p-12 rounded-3xl shadow-[0_20px_40px_-15px_rgba(91,45,139,0.1)]">
           <h3 className="font-bold text-2xl text-foreground mb-10">Our Approach</h3>
 
           <div className="flex flex-col">
@@ -106,7 +106,7 @@ const About = () => {
                 key={step.num}
                 className={`relative pl-16 group cursor-default ${
                   idx !== steps.length - 1
-                    ? 'pb-10 border-b border-primary/10 dark:border-white/10 mb-10'
+                    ? 'pb-10 border-b border-primary/10 dark:border-white/[0.08] dark:border-[0.5px] mb-10'
                     : ''
                 }`}
               >

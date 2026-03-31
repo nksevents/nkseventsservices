@@ -106,7 +106,7 @@ const Contact = () => {
           </div>
 
           {/* ── Right: form (3/5) ── */}
-          <div className="lg:col-span-3 bg-card dark:bg-white/5 border border-border dark:border-white/10 rounded-2xl p-8 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.08)]">
+          <div className="lg:col-span-3 bg-card dark:bg-white/5 border border-border dark:border-white/[0.08] dark:border-[0.5px] rounded-2xl p-8 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.08)]">
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
 
               {/* Name / Email side by side */}

@@ -130,7 +130,7 @@ const Works = () => {
             <div
               key={work.id}
               onClick={() => setSelectedWork(work)}
-              className="group bg-card dark:bg-white/5 border border-border dark:border-white/10 rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer backdrop-blur-md hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(91,45,139,0.2)] dark:hover:shadow-[0_12px_40px_rgba(143,43,203,0.15)] flex flex-col h-full"
+              className="group bg-card dark:bg-white/5 border border-border dark:border-white/[0.08] dark:border-[0.5px] rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer backdrop-blur-md hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(91,45,139,0.2)] dark:hover:shadow-[0_12px_40px_rgba(143,43,203,0.15)] flex flex-col h-full"
             >
               {/* Media Section */}
               <div className="relative w-full h-[280px] overflow-hidden">
@@ -178,7 +178,7 @@ const Works = () => {
                   {work.description}
                 </p>
 
-                <div className="flex gap-4 flex-wrap mt-auto pt-4 border-t border-border dark:border-white/10">
+                <div className="flex gap-4 flex-wrap mt-auto pt-4 border-t border-border dark:border-white/[0.08] dark:border-[0.5px]">
                   <div className="flex items-center gap-1.5 text-[13px] font-medium text-foreground/70">
                     <Calendar size={15} className="text-primary" />
                     {work.date}
@@ -248,7 +248,7 @@ const Works = () => {
                 {selectedWork.description}
               </p>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-muted dark:bg-white/5 p-6 rounded-xl border border-border dark:border-white/10">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-muted dark:bg-white/5 p-6 rounded-xl border border-border dark:border-white/[0.08] dark:border-[0.5px]">
                 <div>
                   <div className="text-sm text-muted-foreground font-medium mb-1">Date</div>
                   <div className="text-base text-foreground font-semibold">{selectedWork.date}</div>

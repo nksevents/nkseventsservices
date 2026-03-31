@@ -8,7 +8,7 @@ const Footer = () => {
   const services = ['Corporate Events', 'School & College', 'Social Events', 'Networking', 'Award Shows', 'Expos'];
 
   return (
-    <footer className="bg-background dark:bg-black border-t border-border dark:border-white/10 pt-10 pb-6 px-6 relative overflow-hidden">
+    <footer className="bg-background dark:bg-black border-t border-border dark:border-white/[0.08] dark:border-[0.5px] pt-10 pb-6 px-6 relative overflow-hidden">
       {/* Background gradient accent */}
       <div className="absolute top-[30%] left-[20%] w-[400px] h-[400px] bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
 
@@ -18,9 +18,9 @@ const Footer = () => {
           {/* Company Info & Socials */}
           <div className="lg:pr-4">
             <img 
-              src="https://customer-assets.emergentagent.com/job_event-execution/artifacts/08irmg5c_NKS%20LOGO.png"
+              src="/main_logo.png"
               alt="NKS Events Logo"
-              className="h-9 w-auto mb-4 dark:brightness-0 dark:invert drop-shadow-sm"
+              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 dark:brightness-0 dark:invert mb-4"
             />
             <p className="text-[13px] font-medium text-muted-foreground leading-snug mb-5">
               Professional event execution and coordination partner for corporates, schools, and communities across Chennai.
@@ -115,7 +115,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border dark:border-white/10 pt-5 flex flex-col md:flex-row justify-between items-center gap-3">
+        <div className="border-t border-border dark:border-white/[0.08] dark:border-[0.5px] pt-5 flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-[11px] font-medium text-muted-foreground">
             © {currentYear} NKS Events & Services. All rights reserved.
           </p>

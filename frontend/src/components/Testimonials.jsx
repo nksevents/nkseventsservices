@@ -60,7 +60,7 @@ const Testimonials = () => {
           {textTestimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="group bg-card dark:bg-white/5 border border-border dark:border-white/10 p-10 rounded-2xl flex flex-col transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(91,45,139,0.1)] relative"
+              className="group bg-card dark:bg-white/5 border border-border dark:border-white/[0.08] dark:border-[0.5px] p-10 rounded-2xl flex flex-col transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(91,45,139,0.1)] relative"
             >
               <div className="p-3 bg-muted dark:bg-white/10 rounded-xl inline-flex self-start mb-6 text-secondary group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
                 <Quote size={28} />
@@ -68,7 +68,7 @@ const Testimonials = () => {
               <p className="text-foreground/90 italic text-[15px] leading-[1.8] flex-1 mb-8 relative z-10">
                 "{testimonial.text}"
               </p>
-              <div className="pt-6 border-t border-border dark:border-white/10">
+              <div className="pt-6 border-t border-border dark:border-white/[0.08] dark:border-[0.5px]">
                 <div className="font-bold text-[17px] text-foreground mb-1 group-hover:text-primary transition-colors">
                   {testimonial.name}
                 </div>
@@ -93,7 +93,7 @@ const Testimonials = () => {
             {videoTestimonials.map((video, index) => (
               <div 
                 key={index} 
-                className="group bg-card dark:bg-white/5 border border-border dark:border-white/10 rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(91,45,139,0.15)]"
+                className="group bg-card dark:bg-white/5 border border-border dark:border-white/[0.08] dark:border-[0.5px] rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(91,45,139,0.15)]"
                 onClick={() => video.videoUrl && window.open(video.videoUrl, '_blank')}
               >
                 <div className="relative w-full h-[300px] overflow-hidden">

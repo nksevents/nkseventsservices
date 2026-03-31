@@ -62,13 +62,13 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-card dark:bg-white/5 border border-border dark:border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_20px_40px_-15px_rgba(91,45,139,0.15)] dark:hover:shadow-[0_20px_40px_-15px_rgba(143,43,203,0.15)] cursor-pointer relative overflow-hidden flex flex-col"
+              className="group bg-card dark:bg-white/5 border border-border dark:border-white/[0.08] dark:border-[0.5px] p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_20px_40px_-15px_rgba(91,45,139,0.15)] dark:hover:shadow-[0_20px_40px_-15px_rgba(143,43,203,0.15)] cursor-pointer relative overflow-hidden flex flex-col"
             >
               {/* Hover gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
 
               {/* Icon */}
-              <div className="text-secondary mb-4 p-3 bg-primary/5 dark:bg-primary/20 rounded-xl inline-flex w-fit group-hover:bg-primary group-hover:text-white transition-colors duration-300 relative z-10 shadow-sm">
+              <div className="text-secondary mb-4 p-3 bg-primary/5 dark:bg-[#7C3AED]/15 dark:border dark:border-[#7C3AED]/30 rounded-xl inline-flex w-fit group-hover:bg-primary group-hover:text-white transition-colors duration-300 relative z-10 shadow-sm">
                 {service.icon}
               </div>
 
