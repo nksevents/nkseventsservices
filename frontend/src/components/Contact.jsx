@@ -27,7 +27,7 @@ const Contact = () => {
 
     try {
       // Replace YOUR_FORM_ID_HERE with the actual ID from Formspree
-      const FORMSPREE_URL = 'https://formspree.io/f/xjgprgej';
+      const FORMSPREE_URL = 'https://formspree.io/f/xeepryzg';
 
       const response = await fetch(FORMSPREE_URL, {
         method: 'POST',
