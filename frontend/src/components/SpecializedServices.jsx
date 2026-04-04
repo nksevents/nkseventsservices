@@ -66,7 +66,7 @@ const SpecializedServices = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
 
               {/* Icon */}
-              <div className="text-secondary mb-4 p-3 bg-muted dark:bg-[#7C3AED]/15 dark:border dark:border-[#7C3AED]/30 rounded-xl inline-flex w-fit group-hover:bg-primary group-hover:text-white transition-colors duration-300 relative z-10 shadow-sm">
+              <div className="text-secondary dark:text-primary mb-4 p-3 bg-muted dark:bg-[#7C3AED]/15 dark:border dark:border-[#7C3AED]/30 rounded-xl inline-flex w-fit group-hover:bg-primary group-hover:text-white transition-colors duration-300 relative z-10 shadow-sm">
                 {service.icon}
               </div>
 

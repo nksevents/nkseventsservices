@@ -68,7 +68,7 @@ const Testimonials = () => {
               <p className="text-foreground/90 italic text-[15px] leading-[1.8] flex-1 mb-8 relative z-10">
                 "{testimonial.text}"
               </p>
-              <div className="pt-6 border-t border-border dark:border-white/[0.08] dark:border-[0.5px]">
+              <div className="pt-6 border-t border-border dark:border-white/[0.08]">
                 <div className="font-bold text-[17px] text-foreground mb-1 group-hover:text-primary transition-colors">
                   {testimonial.name}
                 </div>

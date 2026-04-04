@@ -20,7 +20,7 @@ const Footer = () => {
             <img 
               src="/main_logo.png"
               alt="NKS Events Logo"
-              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 dark:brightness-0 dark:invert mb-4"
+              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 dark:bg-white/90 dark:p-1.5 dark:rounded-lg mb-4"
             />
             <p className="text-[13px] font-medium text-muted-foreground leading-snug mb-5">
               Professional event execution and coordination partner for corporates, schools, and communities across Chennai.

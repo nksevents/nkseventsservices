@@ -106,11 +106,11 @@ const About = () => {
                 key={step.num}
                 className={`relative pl-16 group cursor-default ${
                   idx !== steps.length - 1
-                    ? 'pb-10 border-b border-primary/10 dark:border-white/[0.08] dark:border-[0.5px] mb-10'
+                    ? 'pb-10 border-b border-primary/10 dark:border-white/[0.08] mb-10'
                     : ''
                 }`}
               >
-                <div className="absolute left-0 top-0 text-5xl font-extrabold text-primary/10 dark:text-primary/20 leading-none -mt-2 transition-colors duration-300 group-hover:text-secondary/20 select-none">
+                <div className="absolute left-0 top-0 text-5xl font-extrabold text-primary/20 dark:text-[#c084fc]/30 leading-none -mt-2 transition-colors duration-300 group-hover:text-primary/40 dark:group-hover:text-[#c084fc]/50 select-none">
                   {step.num}
                 </div>
                 <h4 className="font-bold text-[17px] text-foreground mb-1.5 relative z-10 group-hover:text-primary transition-colors duration-200">

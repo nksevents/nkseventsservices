@@ -53,7 +53,7 @@ const Header = () => {
           <img 
             src="/main_logo.png"
             alt="NKS Events Logo"
-            className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 dark:brightness-0 dark:invert"
+            className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 dark:bg-white/90 dark:p-1.5 dark:rounded-lg"
           />
           <span className="text-foreground dark:text-white font-bold text-[17px] tracking-widest hidden sm:block">
             NKS EVENTS & SERVICES
