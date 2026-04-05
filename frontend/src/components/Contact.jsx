@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, Globe, Clock } from 'lucide-react';
 
 const contactItems = [
-  { icon: Phone,  label: 'Phone',    text: '+91 88257 67852',          href: 'tel:8825767852' },
+  { icon: Phone,  label: 'Phone',    text: '+91 89396 67818',          href: 'tel:8939667818' },
   { icon: Mail,   label: 'Email',    text: 'info@nkseventsservices.in', href: 'mailto:info@nkseventsservices.in' },
   { icon: Globe,  label: 'Website',  text: 'www.nkseventsservices.in',  href: 'https://www.nkseventsservices.in' },
   { icon: MapPin, label: 'Address',  text: 'No 1, Annamalai Nagar, 3rd Cross St, Thiruvottiyur, Chennai – 600 019', href: null },
