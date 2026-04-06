@@ -37,7 +37,7 @@ const OurClients = () => {
           <div className="absolute inset-y-0 left-0 w-24 sm:w-32 bg-gradient-to-r from-muted dark:from-zinc-950 to-transparent z-10 pointer-events-none"></div>
           
           {/* The scrolling track */}
-          <div className="flex animate-marquee-right items-center w-max">
+          <div className="flex animate-marquee-left items-center w-max">
             {duplicatedClients.map((client, index) => (
               <div 
                 key={`${client.id}-${index}`} 

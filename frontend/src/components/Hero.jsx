@@ -10,33 +10,35 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[100vh] flex items-center justify-center overflow-hidden pt-28 pb-20 px-6">
+    <section id="hero" className="relative min-h-[100vh] flex items-center justify-center overflow-hidden pt-28 pb-10 px-6">
       {/* Auto-playing Background Video */}
-      <div className="absolute inset-0 w-full h-full z-0 bg-white dark:bg-black">
+      <div className="absolute inset-0 w-full h-full z-0 bg-black dark:bg-black">
         <video 
           autoPlay 
           loop 
           muted 
           playsInline 
-          className="absolute inset-0 w-full h-full object-cover opacity-90 invert grayscale dark:invert-0 dark:grayscale-0"
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
         >
-          {/* High quality event placeholder videos */}
+          {/* Using custom video source */}
+          <source src="/assets/hero-video.mp4" type="video/mp4" />
+          {/* Placeholder videos (commented out) 
           <source src="https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4" type="video/mp4" />
           <source src="https://videos.pexels.com/video-files/2774422/2774422-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+          */}
         </video>
         
-        {/* Purpleish overlay to maintain NKS branding. In light mode: mix-blend-screen to turn dark dots purple on white bg. */}
+        {/* Background Effects (commented out per user request)
         <div className="absolute inset-0 bg-primary mix-blend-screen dark:bg-gradient-to-br dark:from-primary/80 dark:via-black/60 dark:to-[#1c0d2b]/95 dark:mix-blend-multiply transition-all duration-500"></div>
-        {/* Subtle vignette */}
         <div className="absolute inset-0 bg-white/20 dark:bg-black/40 transition-all duration-500"></div>
+        */}
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl w-full text-center mx-auto flex flex-col items-center">
         <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000 fill-mode-both relative">
           
-          {/* Strong contrast backdrop gradient to ensure text readability over the active video background */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] sm:w-[150%] h-[200%] sm:h-[160%] bg-[radial-gradient(circle,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0.7)_30%,rgba(255,255,255,0)_70%)] dark:bg-[radial-gradient(circle,rgba(10,10,11,0.9)_0%,rgba(10,10,11,0.7)_30%,rgba(10,10,11,0)_70%)] blur-[25px] pointer-events-none -z-10"></div>
+          {/* Text backdrop gradient removed as per user request */}
 
           <div className="inline-block px-5 py-2 bg-primary/5 dark:bg-white/10 backdrop-blur-md border border-primary/20 dark:border-white/20 rounded-full mb-8 shadow-lg shadow-primary/10 dark:shadow-primary/20 hover:bg-primary/10 dark:hover:bg-white/15 transition-colors cursor-default">
             <span className="text-primary dark:text-white/90 text-sm font-semibold uppercase tracking-widest flex items-center gap-2">

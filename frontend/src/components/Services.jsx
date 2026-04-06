@@ -42,7 +42,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="bg-background dark:bg-black py-24 px-6 relative overflow-hidden">
+    <section id="services" className="bg-background dark:bg-black pt-12 pb-24 px-6 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 dark:bg-primary/10 rounded-full blur-[120px] -z-10 pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">

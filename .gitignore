@@ -46,3 +46,12 @@ __pycache__/
 *.pyc
 venv/
 .venv/
+
+# Large Media
+*.mp4
+*.mov
+*.zip
+*.tar
+*.gz
+frontend/assets/*.mp4
+frontend/public/assets/*.mp4

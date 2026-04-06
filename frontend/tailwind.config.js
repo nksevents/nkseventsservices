@@ -74,12 +74,17 @@ module.exports = {
   			'marquee-right': {
   				'0%': { transform: 'translateX(-50%)' },
   				'100%': { transform: 'translateX(0%)' }
+  			},
+  			'marquee-left': {
+  				'0%': { transform: 'translateX(0%)' },
+  				'100%': { transform: 'translateX(-50%)' }
   			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-  			'marquee-right': 'marquee-right 25s linear infinite'
+  			'marquee-right': 'marquee-right 25s linear infinite',
+  			'marquee-left': 'marquee-left 25s linear infinite'
   		}
   	}
   },

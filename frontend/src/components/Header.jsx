@@ -46,7 +46,7 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-md border-b border-primary/10 py-3' : 'bg-transparent py-5'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md shadow-md border-primary/10 ${scrolled ? 'py-3' : 'py-4'}`}>
       <nav className="w-full px-6 md:px-12 lg:px-16 flex justify-between items-center">
         {/* Logo */}
         <div className="cursor-pointer flex items-center gap-6 z-50 group" onClick={() => scrollToSection('hero')}>
@@ -66,7 +66,7 @@ const Header = () => {
             <button 
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className="text-foreground dark:text-white/90 hover:text-primary dark:hover:text-white font-medium text-[15px] transition-colors duration-200"
+              className="text-foreground dark:text-white/90 hover:text-primary dark:hover:text-white font-semibold text-[15px] transition-colors duration-200"
             >
               {link.label}
             </button>
@@ -99,7 +99,7 @@ const Header = () => {
           </button>
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="relative p-2 text-foreground dark:text-white"
+            className={`relative p-2 text-foreground dark:text-white`}
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} className={!scrolled && !isMenuOpen ? 'dark:drop-shadow-md' : ''} />}
           </button>

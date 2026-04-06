@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
-import { ExternalLink, Calendar, MapPin, X } from 'lucide-react';
+import { ExternalLink, Calendar, MapPin, X, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Works = () => {
   const [selectedWork, setSelectedWork] = useState(null);
+  const [showMore, setShowMore] = useState(false);
 
   const works = [
-    // Professional Networking
+    // 1. OneEyes
     {
       id: 1,
-      title: 'Hello Techies Meetup',
-      client: '@Shiash Infotech',
-      type: 'Networking',
+      title: 'Oneyes-Startup Fest',
+      client: '@Sairam Engg College',
+      type: 'Buisness Expo',
       date: 'TBD',
       location: 'Chennai',
-      image: '/assets/HelloTechies1.jpeg',
-      description: 'A special event connecting tech professionals, innovators, and industry leaders.',
+      video: '/assets/drone-video.mp4',
+      description: 'Startup fest and tech exhibition designed for students and upcoming entrepreneurs.',
       embedLink: ''
     },
+    // 2. Hello Techies Connect
     {
       id: 2,
       title: 'Hello Techies Connect',
@@ -28,8 +30,21 @@ const Works = () => {
       description: 'An exclusive networking meetup designed for collaboration and growth.',
       embedLink: ''
     },
+    // 3. Career Launchpad
     {
       id: 3,
+      title: 'Career Launchpad for Error Makes Clever',
+      client: '@Cowrks',
+      type: 'Corporate',
+      date: 'TBD',
+      location: 'Chennai',
+      image: '/assets/CareerLaunchPad.png',
+      description: 'A dedicated corporate launchpad event for career acceleration and placement.',
+      embedLink: ''
+    },
+    // 4. Editors Connect
+    {
+      id: 4,
       title: 'Editors Connect for Pro Editors Club',
       client: '@Kamarajar Arangam',
       type: 'Networking',
@@ -39,43 +54,72 @@ const Works = () => {
       description: 'A dedicated connect event bridging professionals in the creative editing space.',
       embedLink: ''
     },
-    // Corporate Events
-    {
-      id: 4,
-      title: 'Carrer Launchpad for Error Makes Clever',
-      client: '@Cowrks',
-      type: 'Corporate',
-      date: 'TBD',
-      location: 'Chennai',
-      image: '/assets/CareerLaunchPad.png',
-      description: 'A dedicated corporate launchpad event for career acceleration and placement.',
-      embedLink: ''
-    },
-    // School and College-events
+    // 5. Bakthavachalam School Alumni Meet
     {
       id: 5,
-      title: 'Oneyes-Startup Fest',
-      client: '@Sairam Engg College',
-      type: 'Institution',
+      title: 'Bakthavachalam School Alumni Meet',
+      client: '@Bakthavachalam School',
+      type: 'Alumni Meet',
       date: 'TBD',
       location: 'Chennai',
-      image: 'https://images.pexels.com/photos/35532879/pexels-photo-35532879.jpeg',
-      description: 'Startup fest and tech exhibition designed for students and upcoming entrepreneurs.',
+      video: '/assets/Bakthavachalam-Alumini-Meet.mp4',
+      description: 'A nostalgic gathering for alumni to reconnect and celebrate their shared history.',
       embedLink: ''
     },
-    // Community Events
+    // 6. Chennai FreeLancer Club Meet
     {
       id: 6,
-      title: 'CFC Special Edition',
+      title: 'Chennai FreeLancer Club Meet',
       client: '@IITM Research Park',
+      type: 'Community',
+      date: 'TBD',
+      location: 'Chennai',
+      video: '/assets/cfc-video.mp4',
+      description: 'A vibrant meetup for freelancers to network, share insights, and collaborate.',
+      embedLink: ''
+    }
+  ];
+
+  const moreWorks = [
+    // 7. Chennai Events Hub
+    {
+      id: 7,
+      title: 'Chennai Events Hub (Find Your Business Partner)',
+      client: '@Chennai Events Hub',
       type: 'Community',
       date: 'TBD',
       location: 'Chennai',
       image: '/assets/CFC.jpeg',
       description: 'A special community-driven gathering focusing on specialized fields and networking.',
       embedLink: ''
+    },
+    // 8. Hello Techies Meetup
+    {
+      id: 8,
+      title: 'Hello Techies Meetup',
+      client: '@Shiash Infotech',
+      type: 'Networking',
+      date: 'TBD',
+      location: 'Chennai',
+      image: '/assets/HelloTechies1.jpeg',
+      description: 'A special event connecting tech professionals, innovators, and industry leaders.',
+      embedLink: ''
+    },
+    // 9. Dummy
+    {
+      id: 9,
+      title: 'Innovation Summit 2025',
+      client: '@Future Core',
+      type: 'Corporate',
+      date: 'Oct 2025',
+      location: 'Chennai',
+      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg',
+      description: 'A visionary summit exploring the future of technology and sustainable business practices.',
+      embedLink: ''
     }
   ];
+
+  const visibleWorks = showMore ? [...works, ...moreWorks] : works;
 
   return (
     <section id="works" className="bg-muted dark:bg-zinc-950 py-24 px-6 relative overflow-hidden">
@@ -96,7 +140,7 @@ const Works = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {works.map((work) => (
+          {visibleWorks.map((work) => (
             <div
               key={work.id}
               onClick={() => setSelectedWork(work)}
@@ -105,15 +149,15 @@ const Works = () => {
               {/* Media Section */}
               <div className="relative w-full h-[280px] overflow-hidden">
                 {work.video ? (
-                  <video 
-                    autoPlay 
-                    muted 
-                    loop 
-                    playsInline 
+                  <video
+                    key={work.video}
+                    src={work.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  >
-                    <source src={work.video} type="video/mp4" />
-                  </video>
+                  />
                 ) : (
                   <img
                     src={work.image}
@@ -137,7 +181,14 @@ const Works = () => {
               {/* Content */}
               <div className="p-7 flex-1 flex flex-col">
                 <h3 className="text-[22px] font-bold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors">
-                  {work.title}
+                  {work.title.includes('(') ? (
+                    <>
+                      {work.title.split('(')[0]}
+                      <span className="block text-[16px] font-semibold mt-1 text-muted-foreground group-hover:text-primary/70 transition-colors">
+                        ({work.title.split('(')[1]}
+                      </span>
+                    </>
+                  ) : work.title}
                 </h3>
                 
                 <p className="text-[16px] text-purple-600 dark:text-purple-500 font-bold mb-4 tracking-wide">
@@ -162,6 +213,26 @@ const Works = () => {
             </div>
           ))}
         </div>
+
+        {/* Load More / Show Less Button */}
+        <div className="flex justify-center mt-14">
+          <button
+            onClick={() => setShowMore((prev) => !prev)}
+            className="group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full border border-primary/40 text-primary font-semibold text-sm tracking-wide hover:bg-primary hover:text-white hover:border-primary hover:shadow-[0_8px_30px_rgba(91,45,139,0.3)] transition-all duration-300"
+          >
+            {showMore ? (
+              <>
+                Show Less
+                <ChevronUp size={16} className="transition-transform duration-300" />
+              </>
+            ) : (
+              <>
+                View More Events
+                <ChevronDown size={16} className="transition-transform duration-300 group-hover:translate-y-0.5" />
+              </>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Modal for work details */}
@@ -176,15 +247,15 @@ const Works = () => {
           >
             <div className="relative h-[300px] sm:h-[400px] w-full">
               {selectedWork.video ? (
-                 <video 
-                 autoPlay 
-                 muted 
-                 loop 
-                 playsInline 
-                 className="w-full h-full object-cover"
-               >
-                 <source src={selectedWork.video} type="video/mp4" />
-               </video>
+                <video
+                  key={selectedWork.video}
+                  src={selectedWork.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
               ) : (
                 <img
                   src={selectedWork.image}
@@ -207,7 +278,14 @@ const Works = () => {
               </div>
               
               <h3 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-4">
-                {selectedWork.title}
+                {selectedWork.title.includes('(') ? (
+                  <>
+                    {selectedWork.title.split('(')[0]}
+                    <span className="block text-[22px] font-bold mt-2 text-muted-foreground">
+                      ({selectedWork.title.split('(')[1]}
+                    </span>
+                  </>
+                ) : selectedWork.title}
               </h3>
               
               <p className="text-xl text-purple-600 dark:text-purple-500 font-bold mb-8">

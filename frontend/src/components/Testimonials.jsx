@@ -25,18 +25,22 @@ const Testimonials = () => {
 
   const videoTestimonials = [
     {
-      name: 'Meera Patel',
-      company: 'Innovation Hub Pvt Ltd',
-      role: 'Marketing Director',
-      thumbnail: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
-      videoUrl: ''
+      name: 'Event Highlight',
+      company: 'Error Makes Clever',
+      role: 'Corporate Event',
+      videoUrl: '/assets/promo-video.mp4'
     },
     {
-      name: 'Suresh Menon',
-      company: 'Star College of Arts',
-      role: 'Event Coordinator',
-      thumbnail: 'https://images.pexels.com/photos/5256816/pexels-photo-5256816.jpeg',
-      videoUrl: ''
+      name: 'Community Meetup',
+      company: 'Prathepa Leo',
+      role: 'Networking Event',
+      videoUrl: '/assets/center-vid.mp4'
+    },
+    {
+      name: 'Special Edition',
+      company: 'CFC',
+      role: 'Community Gathering',
+      videoUrl: '/assets/cfc-video.mp4'
     }
   ];
 
@@ -89,34 +93,25 @@ const Testimonials = () => {
             Video Testimonials
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {videoTestimonials.map((video, index) => (
               <div 
                 key={index} 
-                className="group bg-card dark:bg-white/5 border border-border dark:border-white/[0.08] dark:border-[0.5px] rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(91,45,139,0.15)]"
-                onClick={() => video.videoUrl && window.open(video.videoUrl, '_blank')}
+                className="group bg-card dark:bg-white/5 border border-border dark:border-white/[0.08] dark:border-[0.5px] rounded-2xl overflow-hidden transition-all duration-300 flex flex-col hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(91,45,139,0.15)]"
               >
-                <div className="relative w-full h-[300px] overflow-hidden">
-                  <img 
-                    src={video.thumbnail}
-                    alt={`${video.name} testimonial`}
+                <div className="relative w-full aspect-[9/16] overflow-hidden bg-black">
+                  <video 
+                    src={video.videoUrl}
+                    autoPlay 
+                    muted 
+                    loop 
+                    playsInline 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  {/* Play Button Overlay */}
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                    <div className="w-20 h-20 bg-primary/90 hover:bg-secondary/95 text-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-[0_0_20px_rgba(91,45,139,0.5)]">
-                      <Play size={36} fill="currentColor" className="ml-2" />
-                    </div>
-                  </div>
-                  
-                  {!video.videoUrl && (
-                    <div className="absolute bottom-4 left-4 right-4 py-2 px-4 bg-white/95 text-primary text-xs font-bold uppercase tracking-wider text-center rounded-lg shadow-md">
-                      Video link coming soon
-                    </div>
-                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
-                <div className="p-8">
+                <div className="p-6">
                   <div className="font-bold text-[18px] text-foreground mb-1 group-hover:text-primary transition-colors">
                     {video.name}
                   </div>
