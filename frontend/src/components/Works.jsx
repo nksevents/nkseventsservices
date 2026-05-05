@@ -14,7 +14,7 @@ const Works = () => {
       type: 'Buisness Expo',
       date: 'TBD',
       location: 'Chennai',
-      video: '/assets/drone-video.mp4',
+      video: 'https://res.cloudinary.com/dzqlvtj9h/video/upload/drone-video_qdazcg.mp4',
       description: 'Startup fest and tech exhibition designed for students and upcoming entrepreneurs.',
       embedLink: ''
     },
@@ -62,7 +62,7 @@ const Works = () => {
       type: 'Alumni Meet',
       date: 'TBD',
       location: 'Chennai',
-      video: '/assets/Bakthavachalam-Alumini-Meet.mp4',
+      video: 'https://www.youtube.com/embed/qAYtVxvdpMk?autoplay=1&mute=1&loop=1&playlist=qAYtVxvdpMk&controls=0&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0',
       description: 'A nostalgic gathering for alumni to reconnect and celebrate their shared history.',
       embedLink: ''
     },
@@ -74,7 +74,7 @@ const Works = () => {
       type: 'Community',
       date: 'TBD',
       location: 'Chennai',
-      video: '/assets/cfc-video.mp4',
+      video: 'https://res.cloudinary.com/dzqlvtj9h/video/upload/cfc-video_z9jaky.mp4',
       description: 'A vibrant meetup for freelancers to network, share insights, and collaborate.',
       embedLink: ''
     }
@@ -149,15 +149,24 @@ const Works = () => {
               {/* Media Section */}
               <div className="relative w-full h-[280px] overflow-hidden">
                 {work.video ? (
-                  <video
-                    key={work.video}
-                    src={work.video}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                  work.video.includes('youtube.com') || work.video.includes('youtu.be') ? (
+                    <iframe
+                      src={work.video}
+                      className="w-[150%] h-[150%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                    ></iframe>
+                  ) : (
+                    <video
+                      key={work.video}
+                      src={work.video}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  )
                 ) : (
                   <img
                     src={work.image}
@@ -247,15 +256,24 @@ const Works = () => {
           >
             <div className="relative h-[300px] sm:h-[400px] w-full">
               {selectedWork.video ? (
-                <video
-                  key={selectedWork.video}
-                  src={selectedWork.video}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
+                selectedWork.video.includes('youtube.com') || selectedWork.video.includes('youtu.be') ? (
+                  <iframe
+                    src={selectedWork.video.replace('controls=0', 'controls=1').replace('pointer-events-none', '')}
+                    className="w-full h-full object-cover"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  <video
+                    key={selectedWork.video}
+                    src={selectedWork.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                )
               ) : (
                 <img
                   src={selectedWork.image}

@@ -21,7 +21,7 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover opacity-100"
         >
           {/* Using custom video source */}
-          <source src="/assets/hero-video.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dzqlvtj9h/video/upload/hero-video_c1jxbx.mp4" type="video/mp4" />
           {/* Placeholder videos (commented out) 
           <source src="https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4" type="video/mp4" />
           <source src="https://videos.pexels.com/video-files/2774422/2774422-uhd_2560_1440_30fps.mp4" type="video/mp4" />

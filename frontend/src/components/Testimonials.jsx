@@ -28,19 +28,19 @@ const Testimonials = () => {
       name: 'Event Highlight',
       company: 'Error Makes Clever',
       role: 'Corporate Event',
-      videoUrl: '/assets/promo-video.mp4'
+      videoUrl: 'https://www.youtube.com/embed/sZRzJjGKr3A?autoplay=1&mute=1&loop=1&playlist=sZRzJjGKr3A&controls=0&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0'
     },
     {
       name: 'Community Meetup',
       company: 'Prathepa Leo',
       role: 'Networking Event',
-      videoUrl: '/assets/center-vid.mp4'
+      videoUrl: 'https://res.cloudinary.com/dzqlvtj9h/video/upload/center-vid_hskdrt.mp4'
     },
     {
       name: 'Special Edition',
       company: 'CFC',
       role: 'Community Gathering',
-      videoUrl: '/assets/cfc-video.mp4'
+      videoUrl: 'https://res.cloudinary.com/dzqlvtj9h/video/upload/cfc-video_z9jaky.mp4'
     }
   ];
 
@@ -100,14 +100,23 @@ const Testimonials = () => {
                 className="group bg-card dark:bg-white/5 border border-border dark:border-white/[0.08] dark:border-[0.5px] rounded-2xl overflow-hidden transition-all duration-300 flex flex-col hover:-translate-y-2 hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(91,45,139,0.15)]"
               >
                 <div className="relative w-full aspect-[9/16] overflow-hidden bg-black">
-                  <video 
-                    src={video.videoUrl}
-                    autoPlay 
-                    muted 
-                    loop 
-                    playsInline 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                  {video.videoUrl.includes('youtube.com') || video.videoUrl.includes('youtu.be') ? (
+                    <iframe
+                      src={video.videoUrl}
+                      className="w-[150%] h-[150%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                    ></iframe>
+                  ) : (
+                    <video 
+                      src={video.videoUrl}
+                      autoPlay 
+                      muted 
+                      loop 
+                      playsInline 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
