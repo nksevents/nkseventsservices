@@ -47,14 +47,14 @@ const Hero = () => {
             </span>
           </div>
           
-          <h1 className="font-sans font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[1.1] md:leading-[1.1] text-foreground dark:text-white mb-6 tracking-tight drop-shadow-[0_0_20px_rgba(255,255,255,1)] dark:drop-shadow-[0_0_25px_rgba(0,0,0,1)] relative z-10">
+          <h1 className="font-sans font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[1.1] md:leading-[1.1] text-foreground dark:text-white mb-6 tracking-tight relative z-10">
             Creating Unforgettable <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-black dark:from-secondary dark:to-[#c276f5] dark:drop-shadow-[0_0_15px_rgba(143,43,203,0.3)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-black dark:from-secondary dark:to-[#c276f5]">
               Experiences
             </span>
           </h1>
           
-          <p className="font-sans font-semibold text-lg md:text-xl text-black/80 dark:text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-[0_0_15px_rgba(255,255,255,1)] dark:drop-shadow-[0_0_15px_rgba(0,0,0,1)] relative z-10">
+          <p className="font-sans font-semibold text-lg md:text-xl text-black/80 dark:text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed relative z-10">
             Professional event execution and coordination for corporates, educational institutions, and communities. We turn your vision into reality.
           </p>
           
